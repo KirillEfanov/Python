@@ -42,3 +42,10 @@ class Manufacturer(Footwear):
         }
         with open(json_filepath, 'w') as file:
             json.dump(to_json, file)
+            
+    def json_load(self, json_filepath: str):
+        with open(json_filepath) as f:
+            a = json.load(f)
+            self.size = a["size"]
+            self.price = a["price"]
+            self.country = a["country"]
