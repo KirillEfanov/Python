@@ -33,4 +33,12 @@ class Manufacturer(Footwear):
     def Print(self):
         super().Print()
         print("Страна: ", self.country)
-
+        
+    def json_save(self, json_filepath: str):
+        to_json = {
+            "size": self.size,
+            "price": self.price,
+            "country": self.country
+        }
+        with open(json_filepath, 'w') as file:
+            json.dump(to_json, file)
