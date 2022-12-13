@@ -23,3 +23,10 @@ class Footwear:
             a = json.load(f)
             self.size = a["size"]
             self.price = a["price"]
+    
+class Manufacturer(Footwear):
+
+    def __init__(self, size, price, country):
+        super().__init__(size, price,)
+        self.country = country
+
