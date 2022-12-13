@@ -15,3 +15,5 @@ random = []
 for i in range(1000000):
     random.append(randint(1, 10))
 print("Медиана ряда 1000000 случайных чисел от 1 до 10: ", median(random), '\n')
+print("4 задание")
+print("Их произведение: ", prod(random))
