@@ -29,4 +29,8 @@ class Manufacturer(Footwear):
     def __init__(self, size, price, country):
         super().__init__(size, price,)
         self.country = country
+        
+    def Print(self):
+        super().Print()
+        print("Страна: ", self.country)
 
