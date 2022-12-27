@@ -17,9 +17,10 @@ for i in range(len(new_list)):
 print(new_list)
 
 #датасет
-df = pd.read_csv('country.csv', sep=',')
-df1 = df[(df.people > 500000)]
-print("Количество стран c населением больше 500000:  ", reduce(lambda a, x: a + 1, df1, 1))
+arr_people = []
+table_countries = pd.read_csv('country.csv', sep=',')
+arr_people = table_countries['people'].tolist()
+print("Количество людей с странах: ", reduce(lambda a, x: a + x, arr_people, 0))
 
 #парсинг
 arr_quotes = []
