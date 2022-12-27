@@ -10,3 +10,8 @@ print("1 задание: ")
 sum_numbers[N] = N * N / 2
 print(sum_numbers[n] == Sum_numbers)
 print()
+
+print("2 задание: ")
+average_row[N] = sum_numbers[N] / N
+print(average_row[n]==Average_row)
+print()
