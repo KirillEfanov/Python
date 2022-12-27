@@ -28,3 +28,10 @@ else:
     median_random_numbers = (row_random_numbers[n//2 - 1] + row_random_numbers[n//2]) / 2
 print(median_random_numbers==Median_random_numbers)
 print()
+
+print("4 задание: ")
+product = 1
+for i in range(n):
+    product = product * row_random_numbers[i]                    
+print(product == Product)
+
