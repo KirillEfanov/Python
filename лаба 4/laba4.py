@@ -9,3 +9,9 @@ def map(list, function):
         list[i] = function(list[i])
     return list
 
+#созданный список
+old_list = ['1', '2', '3', '4', '5']
+new_list = list(map(old_list, int))
+for i in range(len(new_list)):
+    new_list[i] = new_list[i] + 5
+print(new_list)
