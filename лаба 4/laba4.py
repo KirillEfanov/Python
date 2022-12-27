@@ -23,11 +23,11 @@ arr_people = table_countries['people'].tolist()
 print("Количество людей с странах: ", reduce(lambda a, x: a + x, arr_people, 0))
 
 #парсинг
-arr_quotes = []
+arr_filma_score = []
 url = 'https://www.kinoafisha.info/rating/movies/2022/'
 response = requests.get(url)
 soup = BeautifulSoup(response.text, 'lxml')
-quotes = soup.find_all('span', class_='rating_num')
-for i in quotes:
-    arr_quotes.append(i.text)
-print("Количество фильмов с оценкой 7.0: ", reduce(lambda a, x: a + x.count('7.0'), arr_quotes, 0))
+filma_score = soup.find_all('span', class_='rating_num')
+for i in filma_score:
+    arr_filma_score.append(i.text)
+print("Количество фильмов с оценкой 7.0: ", reduce(lambda a, x: a + x.count('7.0'), arr_filma_score, 0))
