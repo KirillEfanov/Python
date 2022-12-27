@@ -15,3 +15,9 @@ new_list = list(map(old_list, int))
 for i in range(len(new_list)):
     new_list[i] = new_list[i] + 5
 print(new_list)
+
+#датасет
+df = pd.read_csv('country.csv', sep=',')
+df1 = df[(df.people > 500000)]
+print("Количество стран c населением больше 500000:  ", reduce(lambda a, x: a + 1, df1, 1))
+
