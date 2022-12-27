@@ -50,7 +50,8 @@ class Manufacturer(Footwear):
 
             
 boots = Manufacturer(50, 40000, "Germany")
+print(boots)
 boots.json_save("data.json")
 sneakers = Manufacturer(0, 0, " ")
 sneakers.json_load("data.json")
-sneakers.Print()
+print(sneakers)
