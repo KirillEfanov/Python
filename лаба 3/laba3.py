@@ -15,3 +15,8 @@ print("2 задание: ")
 average_row[N] = sum_numbers[N] / N
 print(average_row[n]==Average_row)
 print()
+
+row_random_numbers = []
+for i in range(n):
+    row_random_numbers.append(randrange(1, 10))
+row_random_numbers.sort()
