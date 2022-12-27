@@ -6,9 +6,8 @@ class Footwear:
         self.size = size
         self.price = price
         
-    def Print(self):
-        print("Размер: ", self.size)
-        print("Цена: ", self.price)
+    def __repr__(self):
+        return "Размер: % s, Цена: % s" % (self.size, self.price)
         
     def json_save(self, json_filepath: str):
         to_json = {
@@ -30,9 +29,8 @@ class Manufacturer(Footwear):
         super().__init__(size, price,)
         self.country = country
         
-    def Print(self):
-        super().Print()
-        print("Страна: ", self.country)
+    def __repr__(self):
+        return "Размер: % s, Цена: % s, Страна: % s" % (self.size, self.price, self.country)
         
     def json_save(self, json_filepath: str):
         to_json = {
