@@ -20,3 +20,11 @@ row_random_numbers = []
 for i in range(n):
     row_random_numbers.append(randrange(1, 10))
 row_random_numbers.sort()
+
+print("3 задание: ")
+if n % 2 == 1:
+    median_random_numbers = row_random_numbers[n//2]
+else:
+    median_random_numbers = (row_random_numbers[n//2 - 1] + row_random_numbers[n//2]) / 2
+print(median_random_numbers==Median_random_numbers)
+print()
