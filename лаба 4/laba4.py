@@ -20,7 +20,7 @@ print(new_list)
 arr_people = []
 table_countries = pd.read_csv('country.csv', sep=',')
 arr_people = table_countries['people'].tolist()
-print("Количество людей с странах: ", reduce(lambda a, x: a + x, arr_people, 0))
+print("Количество людей в странах: ", reduce(lambda a, x: a + x, arr_people, 0))
 
 #парсинг
 arr_filma_score = []
